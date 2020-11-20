@@ -16,9 +16,13 @@ const showText = (e) => {
   const targetIcon = elem.children[0];
 
   if (targetText.classList.contains("show")) {
+    elem.classList.remove("title-active");
     targetText.classList.remove("show");
     targetIcon.classList.remove("anime");
   } else {
+    titles.forEach((title) => {
+      title.classList.remove("title-active");
+    });
     texts.forEach((text) => {
       text.classList.remove("show");
     });
@@ -26,6 +30,7 @@ const showText = (e) => {
     icons.forEach((icon) => {
       icon.classList.remove("anime");
     });
+    elem.classList.add("title-active");
     targetText.classList.add("show");
     targetIcon.classList.add("anime");
   }
