@@ -1,0 +1,82 @@
+/* set opacity:0 to animation-related elements  */
+.class {
+  opacity: 0;
+}
+
+/* slide-in */
+.slide-in-left {
+  animation: slideInLeft 0.75s ease both;
+}
+
+.slide-in-left-delay {
+  animation: slideInLeft 0.75s ease both;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-18.75rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.75s ease both;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(81.25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* fade-in */
+.fade-in {
+  animation: fadeIn 1s ease both;
+}
+
+/* fade-in delay */
+.fade-in.delay {
+  animation-delay: 0.75s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* flip */
+.flipX {
+  animation: flipX 1.5s ease-in-out both;
+}
+
+@keyframes flipX {
+  0% {
+    transform: perspective(25rem) rotateX(90deg);
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(25rem) rotateX(-10deg);
+  }
+  70% {
+    transform: perspective(25rem) rotateX(10deg);
+  }
+  100% {
+    transform: perspective(25rem) rotateX(0deg);
+    opacity: 1;
+  }
+}
