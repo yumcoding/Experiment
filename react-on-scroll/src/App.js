@@ -1,8 +1,11 @@
+import NavBar from "./NavBar/NavBar";
 import "./App.css";
-import NavBar from "./NavBar";
-
 function App() {
-	return <NavBar />;
+	return (
+		<div className="App">
+			<NavBar />
+		</div>
+	);
 }
 
 export default App;

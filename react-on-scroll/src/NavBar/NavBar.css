@@ -1,0 +1,15 @@
+.nav-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	transition: all 0.8s ease-in-out;
+}
+
+.nav-container.down {
+	background-color: white;
+	color: black;
+}
